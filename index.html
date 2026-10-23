@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lourhzal</title>
+    <meta name="description" content="Meet Me! I'm Lourhzal. An Engineering student from Morocco.">
+
+    <link rel="canonical" href="https://lourhzal.pro">
+    <link rel="icon" href="assets/logo.png">
+
+    <!-- 4. Open Graph Meta Tags (Controls how your site looks when shared on social media/Discord) -->
+    <meta property="og:title" content="Lourhzal">
+    <meta property="og:description" content="Meet Me! I'm Lourhzal. An Engineering student from Morocco.">
+    <meta property="og:image" content="https://lourhzal.pro/assets/logo.png">
+    <meta property="og:url" content="https://lourhzal.pro">
+    <meta property="og:type" content="website">
+
+    <!-- GSAP CDN for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <link href="assets/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/3.1.1/iconify.min.js"
+      integrity="sha512-oQ1yQwSEIc9CTcK7pffEyS8fxom2iUWQrALk3j3+wfdSDjQ77EZbzGMGe2ZYmfoC8M9vR47apbS1ZYbW05y/pg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- Ambient Glow Background -->
+    <div class="glow-bg"></div>
+    <div class="noise-overlay"></div>
+    <canvas id="starfield-canvas"></canvas>
+    <div id="preloader">
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
+      <p class="loader-text">Loading...</p>
+    </div>
+    <main id="main">
+      <header class="header" id="head">
+        <div class="logo">LOURHZAL<span>.</span></div>
+        <nav class="nav">
+          <ul>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#exp">Experience</a></li>
+            <li><a class="nav-link" href="#store">Store</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+        <div class="extra">
+          <a href="#contact"
+            >CONTACT
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="currentColor"
+                d="m21.41 11.09l-18-8c-.37-.16-.8-.09-1.09.19s-.39.7-.25 1.08L3.9 9.25l7.1 2.76l-7.47 3.73l-1.47 3.91c-.14.38-.04.8.25 1.08a1 1 0 0 0 1.1.18l18-8a.998.998 0 0 0 0-1.82"
+              />
+            </svg>
+          </a>
+        </div>
+      </header>
+      <section class="hero" id="hero">
+        <h3 class="intro">Hi, I'm <span>LOURHZAL</span>.</h3>
+        <h1><span class="hero-title fx-starlight" id="typed"></span></h1>
+        <p class="hero-subtitle">
+          Engineering student from Morocco, who is fascinated by Maths, Fantasy,
+          and everything in between.
+        </p>
+        <div class="links">
+          <a href="#about">
+            <span class="span-mother">
+              <span>A</span>
+              <span>b</span>
+              <span>o</span>
+              <span>u</span>
+              <span>t</span>
+            </span>
+            <span class="span-mother2">
+              <span>A</span>
+              <span>b</span>
+              <span>o</span>
+              <span>u</span>
+              <span>t</span>
+            </span>
+          </a>
+          <a href="#store"
+            ><span class="span-mother">
+              <span>S</span>
+              <span>t</span>
+              <span>o</span>
+              <span>r</span>
+              <span>e</span>
+            </span>
+            <span class="span-mother2">
+              <span>S</span>
+              <span>t</span>
+              <span>o</span>
+              <span>r</span>
+              <span>e</span>
+            </span></a
+          >
+        </div>
+      </section>
+      <section class="about" id="about">
+        <!-- <h1 class="titleabout">Ab<span>out</span>.</h1> -->
+        <svg
+          class="fx-contour titleabout"
+          viewBox="0 0 260 56"
+          role="img"
+          aria-label="About"
+        >
+          <text
+            x="50%"
+            y="50%"
+            dominant-baseline="central"
+            text-anchor="middle"
+          >
+            ABOUT.
+          </text>
+        </svg>
+        <div class="outer">
+          <div class="leftabout">
+            <div class="container">
+              <div class="card">
+                <h3 class="lang">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.01em"
+                    height="1em"
+                    viewBox="0 0 256 255"
+                  >
+                    <path d="M0 0h256v255H0z" fill="none" />
+                    <defs>
+                      <linearGradient
+                        id="SVGg39WleeP"
+                        x1="12.959%"
+                        x2="79.639%"
+                        y1="12.039%"
+                        y2="78.201%"
+                      >
+                        <stop offset="0%" stop-color="#387eb8" />
+                        <stop offset="100%" stop-color="#366994" />
+                      </linearGradient>
+                      <linearGradient
+                        id="SVGlXoRkc4T"
+                        x1="19.128%"
+                        x2="90.742%"
+                        y1="20.579%"
+                        y2="88.429%"
+                      >
+                        <stop offset="0%" stop-color="#ffe052" />
+                        <stop offset="100%" stop-color="#ffc331" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      fill="url(#SVGg39WleeP)"
+                      d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072M92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13"
+                    />
+                    <path
+                      fill="url(#SVGlXoRkc4T)"
+                      d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897m34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13"
+                    />
+                  </svg>
+                  Python
+                </h3>
+                <pre><code class="language-python">
+Name = "Mohamed Lourhzal"
+For determination in range(infinity):
+    print("Do MORE!!")
+                            </code></pre>
+              </div>
+              <div class="card">
+                <h3 class="lang">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 32 32"
+                  >
+                    <path d="M0 0h32v32H0z" fill="none" />
+                    <path fill="#f5de19" d="M2 2h28v28H2z" />
+                    <path
+                      d="M20.809 23.875a2.87 2.87 0 0 0 2.6 1.6c1.09 0 1.787-.545 1.787-1.3c0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964c0-1.973 1.5-3.476 3.853-3.476a3.89 3.89 0 0 1 3.742 2.107L25 18.128A1.79 1.79 0 0 0 23.311 17a1.145 1.145 0 0 0-1.259 1.128c0 .789.489 1.109 1.618 1.6l.658.282c2.236.959 3.5 1.936 3.5 4.133c0 2.369-1.861 3.667-4.36 3.667a5.06 5.06 0 0 1-4.795-2.691Zm-9.295.228c.413.733.789 1.353 1.693 1.353c.864 0 1.41-.338 1.41-1.653v-8.947h2.631v8.982c0 2.724-1.6 3.964-3.929 3.964a4.085 4.085 0 0 1-3.947-2.4Z"
+                    /></svg
+                  >JavaScript
+                </h3>
+                <pre><code class="language-javascript">
+while (true) {
+    console.log(`${developer} is an Engineering Student at ENSA Fes`);
+}
+                            </code></pre>
+              </div>
+              <div class="card">
+                <h3 class="lang">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="0.89em"
+                    height="1em"
+                    viewBox="0 0 256 288"
+                  >
+                    <path d="M0 0h256v288H0z" fill="none" />
+                    <path
+                      fill="#649ad2"
+                      d="M255.987 84.59c-.002-4.837-1.037-9.112-3.13-12.781c-2.054-3.608-5.133-6.632-9.261-9.023c-34.08-19.651-68.195-39.242-102.264-58.913c-9.185-5.303-18.09-5.11-27.208.27c-13.565 8-81.48 46.91-101.719 58.632C4.071 67.6.015 74.984.013 84.58C0 124.101.013 163.62 0 203.141c0 4.73.993 8.923 2.993 12.537c2.056 3.717 5.177 6.824 9.401 9.269c20.24 11.722 88.164 50.63 101.726 58.631c9.121 5.382 18.027 5.575 27.215.27c34.07-19.672 68.186-39.262 102.272-58.913c4.224-2.444 7.345-5.553 9.401-9.267c1.997-3.614 2.992-7.806 2.992-12.539c0 0 0-79.018-.013-118.539"
+                    />
+                    <path
+                      fill="#004482"
+                      d="m128.392 143.476l-125.4 72.202c2.057 3.717 5.178 6.824 9.402 9.269c20.24 11.722 88.164 50.63 101.726 58.631c9.121 5.382 18.027 5.575 27.215.27c34.07-19.672 68.186-39.262 102.272-58.913c4.224-2.444 7.345-5.553 9.401-9.267z"
+                    />
+                    <path
+                      fill="#1a4674"
+                      d="M91.25 164.863c7.297 12.738 21.014 21.33 36.75 21.33c15.833 0 29.628-8.7 36.888-21.576l-36.496-21.141z"
+                    />
+                    <path
+                      fill="#01589c"
+                      d="M255.987 84.59c-.002-4.837-1.037-9.112-3.13-12.781l-124.465 71.667l124.616 72.192c1.997-3.614 2.99-7.806 2.992-12.539c0 0 0-79.018-.013-118.539"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M249.135 148.636h-9.738v9.74h-9.74v-9.74h-9.737V138.9h9.737v-9.738h9.74v9.738h9.738v9.737ZM128 58.847c31.135 0 58.358 16.74 73.17 41.709l.444.759l-37.001 21.307c-7.333-12.609-20.978-21.094-36.613-21.094c-23.38 0-42.333 18.953-42.333 42.332a42.13 42.13 0 0 0 5.583 21.003c7.297 12.738 21.014 21.33 36.75 21.33c15.659 0 29.325-8.51 36.647-21.153l.241-.423l36.947 21.406c-14.65 25.597-42.228 42.851-73.835 42.851c-31.549 0-59.084-17.185-73.754-42.707c-7.162-12.459-11.26-26.904-11.26-42.307c0-46.95 38.061-85.013 85.014-85.013m75.865 70.314v9.738h9.737v9.737h-9.737v9.74h-9.738v-9.74h-9.738V138.9h9.738v-9.738h9.738Z"
+                    /></svg
+                  >C++
+                </h3>
+                <pre><code class="language-cpp">
+
+int main() {
+    std::string curiosity = True;
+    
+    for (;;) {
+        std::cout &lt;&lt; curiosity &lt;&lt; "is endless. From science to novels." &lt;&lt; std::endl;
+    }
+    return 0;
+}
+                            </code></pre>
+              </div>
+              <div class="card">
+                <h3 class="lang">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M0 0h512v512H0z" fill="none" />
+                    <path
+                      fill="#00acd7"
+                      d="m135.6 210.5l-4.2 6.5c-.5.7-1.7 1.5-2.5 1.5l-90.2-.2c-1 0-1.2-.5-.7-1.2l5.2-6.7c.5-.7 1.7-1.2 2.7-1.2h89c1-.1 1.2.6.7 1.3M121.9 232H8.2c-1 0-2.2.5-2.7 1.2L.2 240c-.5.7-.2 1.2.7 1.2l117.9-.2c1 0 2-.5 2.2-1.5l2-6c.4-.8-.1-1.5-1.1-1.5m-5.5 22.9H66.6c-1 0-2 .7-2.5 1.5l-3.5 6.2c-.5.7-.2 1.5.7 1.5l54.3.2c.7 0 1.7-.7 1.7-1.7l.5-6c.1-.9-.4-1.7-1.4-1.7m366 62.6c-16.5 16.7-36.6 27.2-59.8 31.9c-6.7 1.2-13.5 1.5-19.9 2.2c-22.7-.5-43.4-7-60.8-21.9c-12.3-10.6-20.7-23.7-24.9-38.9c-2.9 5.9-6.4 11.5-10.5 16.9c-17.9 23.7-41.4 38.4-71 42.4c-24.4 3.2-47.1-1.5-67.1-16.5c-18.4-14-28.9-32.4-31.7-55.3c-3.2-27.2 4.7-51.6 21.2-73c17.7-23.2 41.1-37.9 69.8-43.1c23.4-4.2 45.9-1.5 66.1 12.2c13.2 8.7 22.7 20.7 28.9 35.1c1.5 2.2.5 3.5-2.5 4.2c-15.7 4-26.4 7-41.9 11c-3.7 1-4 1.2-7.2-2.5c-3.7-4.2-6.5-7-11.7-9.5c-15.7-7.7-30.9-5.5-45.1 3.7c-17 11-25.7 27.2-25.4 47.4c.2 19.9 14 36.4 33.7 39.1c17 2.2 31.2-3.7 42.4-16.5c2.2-2.7 4.2-5.7 6.7-9.2h-48.1c-5.2 0-6.5-3.2-4.7-7.5c3.2-7.7 9.2-20.7 12.7-27.2c.7-1.5 2.5-4 6.2-4h80.3c3.6-11.4 9.4-22.2 17.2-32.4c18.2-23.9 40.1-36.4 69.8-41.6c25.4-4.5 49.4-2 71 12.7c19.7 13.5 31.9 31.7 35.1 55.6c4.1 33.8-5.7 61.3-28.8 84.7m-20.5-66.6c-.2-3.2-.2-5.7-.7-8.2c-4.5-24.7-27.2-38.6-50.9-33.2c-23.2 5.2-38.1 19.9-43.6 43.4c-4.5 19.4 5 39.1 22.9 47.1c13.7 6 27.4 5.2 40.6-1.5c19.8-10.2 30.5-26.1 31.7-47.6"
+                    /></svg
+                  >Golang
+                </h3>
+                <pre><code class="language-go">
+import "fmt"
+
+func main() {
+	name := "Mohamed Lourhzal"
+	
+	for {
+		fmt.Printf("%s: I am ambitious. I want to learn and master everything.\n", name)
+	}
+}
+                            </code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="rightabout">       
+                    <div class="card">
+                        <div class="mac-header">
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                        </div>
+                        <span class="card-title">About Me.</span>
+                        <p class="card-description">
+                            I'm Lourhzal, an Engineering student at Ecole Nationale des Sciences Appliques in Fes, Morocco. I dive into complex scientific problems, and write novels and poems from the corners of my mind. I possess an urge to learn everything about this vast universe.
+                        </p>
+                        <span class="card-tag">Morocco</span> <span class="card-tag">ENSA</span>
+                        <div class="code-editor">
+                            <pre><code>&lt;h1&gt; Hello World &lt;/h1&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+
+                </div> -->
+        </div>
+      </section>
+      <section class="experience" id="exp">
+        <div class="title fx-shimmer">Experience.</div>
+        <ul>
+          <li>
+            <div>
+              <time>2015</time>
+              <div class="discovery">
+                <h1>Programming Intro</h1>
+                <p>HTML, CSS & JS</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2017 - 2022</time>
+              <div class="discovery">
+                <h1>Systems and Projects</h1>
+                <p>DIY from various materials.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2024</time>
+              <div class="discovery">
+                <h1>First Novel</h1>
+                <p>First step at the world of writing.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2025 - 2026</time>
+              <div class="discovery">
+                <h1>Bac Science Math B</h1>
+                <p>Advanced studies in mathematics.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2026 - Present</time>
+              <div class="discovery">
+                <h1>Engineering Student</h1>
+                <p>Student at ENSA Fes.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="store" id="store">
+        <div class="storetitle fx-blueprint">Store.</div>
+        <div class="store-grid">
+          <!-- NOVEL 1 -->
+          <div class="store-card">
+            <div class="card-cover-wrapper">
+              <img
+                src="assets/aerimus.png"
+                alt="The Seven Flaws of Time Cover"
+                class="book-cover"
+              />
+              <span class="badge live">Available Now</span>
+            </div>
+            <div class="card-details">
+              <h3 class="novel-title">Aerimus: Twice Burnt by You</h3>
+              <p class="novel-genre">Dark Fantasy</p>
+
+              <!-- Format Selector -->
+              <div class="format-selector">
+                <button
+                  class="format-btn active"
+                  data-price="$3.49"
+                  data-link="#kdp-ebook"
+                >
+                  eBook
+                </button>
+                <button
+                  class="format-btn"
+                  data-price="$7.99"
+                  data-link="#kdp-paperback"
+                >
+                  Paperback
+                </button>
+                <button
+                  class="format-btn"
+                  data-price="$--.--"
+                  data-link="#kdp-hardcover"
+                >
+                  Hardcover
+                </button>
+              </div>
+
+              <div class="card-footer">
+                <div class="price-display">
+                  <span class="label">Price:</span>
+                  <span class="price-amount">$3.49</span>
+                </div>
+                <a
+                  href="https://www.amazon.com/dp/B0HDV5NP4Q"
+                  class="buy-btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Buy on Amazon ➔
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- NOVEL 2 -->
+          <div class="store-card">
+            <div class="card-cover-wrapper">
+              <img
+                src="assets/unnamed.png"
+                alt="Unnamed Lie Cover"
+                class="book-cover"
+              />
+              <span class="badge live">Available Now</span>
+            </div>
+            <div class="card-details">
+              <h3 class="novel-title">Unnamed Lie</h3>
+              <p class="novel-genre">Psychological Thriller / Novella</p>
+
+              <div class="format-selector">
+                <button
+                  class="format-btn active"
+                  data-price="$3.49"
+                  data-link="#kdp-ebook"
+                >
+                  eBook
+                </button>
+                <button
+                  class="format-btn"
+                  data-price="$9.99"
+                  data-link="#kdp-paperback"
+                >
+                  Paperback
+                </button>
+                <button
+                  class="format-btn"
+                  data-price="$--.--"
+                  data-link="#kdp-hardcover"
+                >
+                  Hardcover
+                </button>
+              </div>
+
+              <div class="card-footer">
+                <div class="price-display">
+                  <span class="label">Price:</span>
+                  <span class="price-amount">$3.49</span>
+                </div>
+                <a
+                  href="https://www.amazon.com/dp/B0HFC7R86R"
+                  class="buy-btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Buy on Amazon ➔
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- NOVEL 3 -->
+          <div class="store-card">
+            <div class="card-cover-wrapper">
+              <img
+                src="assets/conscientia.png"
+                alt="Novel Title 3 Cover"
+                class="book-cover"
+              />
+              <span class="badge upcoming-badge">In Progress</span>
+            </div>
+            <div class="card-details">
+              <h3 class="novel-title">Conscientia</h3>
+              <p class="novel-genre">Post-Apocalyptic / Sci-Fi</p>
+              <p class="upcoming-desc">
+                Currently being drafted. Join the notification list or follow
+                updates on social channels.
+              </p>
+              <div class="card-footer">
+                <button class="notify-btn" disabled>Coming Soon</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- UPCOMING RELEASE CARD -->
+          <div class="store-card upcoming">
+            <div class="card-cover-wrapper blur-preview">
+              <div class="placeholder-cover">
+                <span class="mystery-icon">.</span>
+              </div>
+              <span class="badge upcoming-badge">In Progress</span>
+            </div>
+            <div class="card-details">
+              <h3 class="novel-title">Untitled Project</h3>
+              <p class="novel-genre">Novel</p>
+              <p class="upcoming-desc">
+                Currently being drafted. Join the notification list or follow
+                updates on social channels.
+              </p>
+              <div class="card-footer">
+                <button class="notify-btn" disabled>Coming Soon</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="projecttitle fx-hologram" data-text="PROJECTS.">
+          Projects.
+        </div>
+        <div class="bento-grid">
+          <!-- FEATURED PROJECT 1 (2x2 Span): FLAWS OF TIME -->
+          <div class="bento-card span-2x2">
+            <div class="card-header-bar">
+              <span class="file-name">flaws-of-time.ser</span>
+              <span class="tech-tag hardware">WorldBuilding</span>
+            </div>
+            <div class="bento-content">
+              <h3>The Seven Flaws of Time</h3>
+              <p>
+                Built a universe based on the concept of the seven flaws of
+                time. Each novel uncovers the mysteries and consequences of
+                one's own flaw.
+              </p>
+              <div class="metric-row">
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Obsession</span>
+                    <span class="metric-label">Done.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Cowardice</span>
+                    <span class="metric-label">Concept Only.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 1%"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Hubris</span>
+                    <span class="metric-label">Drafting.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 20%"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Hate</span>
+                    <span class="metric-label">Concept Only.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 5%"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Wrath</span>
+                    <span class="metric-label">Done.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Hypocrisy</span>
+                    <span class="metric-label">Drafting.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 25%"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metrictxt">
+                    <span class="metric-val">Malice</span>
+                    <span class="metric-label">Concept Only.</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 1%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer-links">
+              <a href="#store" class="proj-link">View ➔</a>
+            </div>
+          </div>
+
+          <!-- UTILITY PROJECT 2 (1x1): Virtual CPU & RAM -->
+          <div class="bento-card">
+            <div class="card-header-bar">
+              <span class="file-name">virtual-cpu.dig</span>
+              <span class="tech-tag ai">Digital Logic</span>
+            </div>
+            <div class="bento-content">
+              <h3>256-Byte RAM & CPU Architecture</h3>
+              <p>
+                Built full functional register blocks, multiplexers, ALU units,
+                and a custom control unit from fundamental logic gates inside a
+                digital logic simulator.
+              </p>
+            </div>
+            <div class="card-footer-links">
+              <a href="https://github.com/MEDURZ" class="proj-link">Source ➔</a>
+            </div>
+          </div>
+
+          <!-- UTILITY PROJECT 3 (1x1): Root Approximation -->
+          <div class="bento-card">
+            <div class="card-header-bar">
+              <span class="file-name">root.approx</span>
+              <span class="tech-tag code">Mathematics</span>
+            </div>
+            <div class="bento-content">
+              <h3>Root Approximation</h3>
+              <p>
+                Using Pade approximant, a highly accurate root approximation
+                formula generalized for any x and any root n.
+              </p>
+            </div>
+            <div class="card-footer-links">
+              <a href="https://github.com/MEDURZ" class="proj-link">View Paper ➔</a>
+            </div>
+          </div>
+
+          <!-- FEATURED PROJECT 4 (2x1 wide): Base Conversion -->
+          <div class="bento-card span-2x1">
+            <div class="card-header-bar">
+              <span class="file-name">base.bin</span>
+              <span class="tech-tag writing">Base Algebra</span>
+            </div>
+            <div class="bento-content">
+              <h3>Base Conversion Theorem</h3>
+              <p>
+                A fully algebraic formula for converting between bases. Only
+                works for bases p less or equal to 10.
+              </p>
+            </div>
+            <div class="card-footer-links">
+              <a href="https://github.com/MEDURZ" class="proj-link">Read More ➔</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contacttitle fx-aurora">Contact.</div>
+        <div class="contact-container">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/myekjpzy"
+            method="POST"
+            class="contact-form"
+          >
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="john@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Let's build something epic..."
+              ></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="submit-btn">
+              Send Message ➔
+            </button>
+            <p id="form-status" class="form-status"></p>
+          </form>
+
+          <!-- Socials Sidebar / Container -->
+          <div class="socials-container">
+            <h3>Connect & Socials</h3>
+            <p>
+              Find my code, projects, and creative updates across platforms:
+            </p>
+
+            <div class="social-links-grid">
+              <a
+                href="https://github.com/MEDURZ"
+                target="_blank"
+                rel="noopener"
+                class="social-link github"
+                ><span class="akar-icons--github-fill"></span>GitHub</a
+              >
+              <a
+                href="https://linkedin.com/in/mohammed-lourhzal-b84443421"
+                target="_blank"
+                rel="noopener"
+                class="social-link linkedin"
+                ><span class="akar-icons--linkedin-box-fill"></span>LinkedIn</a
+              >
+              <a
+                href="https://instagram.com/@lourhza.l"
+                target="_blank"
+                rel="noopener"
+                class="social-link instagram"
+                ><span class="akar-icons--instagram-fill"></span>Instagram</a
+              >
+              <a
+                href="https://tiktok.com/@lourhzal"
+                target="_blank"
+                rel="noopener"
+                class="social-link tiktok"
+                ><span class="akar-icons--tiktok-fill"></span>TikTok</a
+              >
+              <a
+                href="https://youtube.com/"
+                target="_blank"
+                rel="noopener"
+                class="social-link youtube"
+                ><span class="akar-icons--youtube-fill"></span>YouTube</a
+              >
+              <a
+                href="https://facebook.com/share/1K9QfZujhC"
+                target="_blank"
+                rel="noopener"
+                class="social-link facebook"
+                ><span class="akar-icons--facebook-fill"></span>Facebook</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer" id="foot">
+        <div class="copyrights">
+          <p>© 2026 Mohamed Lourhzal. All rights reserved.</p>
+        </div>
+        <div class="socials">
+          <div class="container">
+            <a href="https://github.com/MEDURZ"><span class="akar-icons--github-fill"></span></a>
+            <a href="https://tiktok.com/@lourhzal"><span class="akar-icons--tiktok-fill"></span></a>
+            <a href="https://youtube.com/"><span class="akar-icons--youtube-fill"></span></a>
+            <a href="https://instagram.com/@lourhza.l"><span class="akar-icons--instagram-fill"></span></a>
+            <a href="https://linkedin.com/in/mohammed-lourhzal-b84443421"><span class="akar-icons--linkedin-box-fill"></span></a>
+            <a href="https://facebook.com/share/1K9QfZujhC"><span class="akar-icons--facebook-fill"></span></a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="assets/prism.js"></script>
+  </body>
+</html>
